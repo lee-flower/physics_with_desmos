@@ -1,37 +1,26 @@
 /// <reference path="../../desmos.d.ts"/>
-const calcContainer = document.getElementById("calculator");
+const calcContainer = document.getElementsByClassName("calculator");
 
-const calc = Desmos.GraphingCalculator(calcContainer, {
+const config = {
     keypad: false,
     showGrid: false,
     showXAxis: false,
     showYAxis: false,
     expressions: true,
     settingsMenu: false,
-});
+    authorFeatures: true,
+};
 
-calc.setExpressions([
+const calcs = new Array();
+
+for (i of calcContainer) {
+    calcs.push(Desmos.GraphingCalculator(i, config));
+}
+
+calcs[0].setExpressions([
     {
-        type: "table",
-        columns: [
-            {
-                latex: "x_{1}",
-                values: ["2^{3}", "f\\left(3^{2.14}\\right)", "\\frac{1}{3}", "\\cos\\left(1.12\\right)"],
-            },
-            {
-                latex: "y_{1}",
-                values: ["3.14^{\\frac{1}{2}}", "f\\left(1.421\\right)", "f\\left(\\frac{1}{3}\\right)", "\\tan\\left(1.12\\right)"],
-                color: "#d93e4f",
-                points: true,
-                lines: true,
-                lineStyle: Desmos.Styles.DASHED,
-                pointStyle: Desmos.Styles.CROSS
-            },
-        ]
+        id: "l0",
+        latex: "\\left(1,1\\right),\\left(0,0\\right)",
+        color: Desmos.Colors.BLUE,
     },
-    {
-        type: "expression",
-        latex: "f\\left(x\\right)=\\sin\\left(x^{3}\\right)",
-        hidden: true,
-    }
 ]);

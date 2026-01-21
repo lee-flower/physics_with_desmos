@@ -1,6 +1,7 @@
 // desmos.d.ts
 declare namespace Desmos {
     let supportedLanguages: Array<string>;
+    let version: string;
 
     enum Colors {
         BLUE = "#2d70b3",
@@ -44,7 +45,7 @@ declare namespace Desmos {
     }
 
     interface Expression {
-        type?: "expression" | "table" | "text";
+        type?: "expression" | "table" | "text" | "folder";
         id?: string;
         latex: string;
         color?: string | Colors;
@@ -70,6 +71,8 @@ declare namespace Desmos {
         columns?: Array<TableColumn>;
         text?: string;
         hidden?: boolean;
+        title?: string;
+        folderId?: string;
     }
 
     interface TableColumn {
@@ -117,7 +120,7 @@ declare namespace Desmos {
         HelperExpression(expression: { latex: string }): HelperExpression;
         setExpression(expression_state: Expression): void;
         setExpressions(expression_states: Array<Expression>): void;
-        getExpressions(): Array<any>;
+        getExpressions(): Array<Expression>;
         removeExpression(expression: {id: string}): void;
         removeExpressions(): void;
         setMathBounds(bounds: {left: number, right: number, bottom: number, top: number}): void;

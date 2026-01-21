@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+:root {
+    --calc-width: 800px;
+    --calc-height: 600px;
+}
+
+.calculator {
+    width: var(--calc-width);
+    height: var(--calc-height);
+}
+
+#container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: row nowrap;
+    margin: calc(var(--calc-width) * 0.1) calc(var(--calc-height) * 0.1);
+}
