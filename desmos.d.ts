@@ -44,7 +44,7 @@ declare namespace Desmos {
     }
 
     interface Expression {
-        type?: "expression" | "tabel" | "text";
+        type?: "expression" | "table" | "text";
         id?: string;
         latex: string;
         color?: string | Colors;
@@ -69,6 +69,7 @@ declare namespace Desmos {
         labelOrientation?: LabelOrientations;
         columns?: Array<TableColumn>;
         text?: string;
+        hidden?: boolean;
     }
 
     interface TableColumn {
@@ -78,12 +79,12 @@ declare namespace Desmos {
         hidden?: boolean;
         points?: boolean;
         lines?: boolean;
-        lineStyle: Styles;
-        lineWidth: number | string;
-        lineOpacity: number | string;
-        pointStyle: Styles;
-        pointSize: number | string;
-        dragMod: DragModes;
+        lineStyle?: Styles;
+        lineWidth?: number | string;
+        lineOpacity?: number | string;
+        pointStyle?: Styles;
+        pointSize?: number | string;
+        dragMode?: DragModes;
     }
 
     interface HelperExpression {
@@ -130,13 +131,13 @@ declare namespace Desmos {
         clearHistory(): void;
         withHistoryReplacement(callback: () => void): void;
         screenshot(__opts__?: ScreenshotOption): string;
-        asyncScreenshot(__opts__?: ScreenshotOption, callback: (URI_SVG: string) => void): void;
+        asyncScreenshot(callback: (URI_SVG: string) => void, __opts__?: ScreenshotOption): void;
         observerEvent(event: "change", callback: (eventName: string, event: CalculatorEvent) => void): void;
         updateSettings(settings: CalculatorConfiguration): void;
         newRandomSeed(): void;
         resize(): void;
-        mathToPixels(coords: {x?: number, y?: number});
-        pixelsToMath(coords: {x?: number, y?: number});
+        mathToPixels(coords: {x?: number, y?: number}): void;
+        pixelsToMath(coords: {x?: number, y?: number}): void;
         focusFirstExpression(): void;
         removeSelected(): void;
     }
