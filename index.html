@@ -1,73 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>Play with Desmos</title>
-    <!--[if lt IE 9]>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Play with Desmos</title>
+  <!--[if lt IE 9]>
       <script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
-    <script type="text/javascript" src="./js/index.js"></script>
-    <link rel="shortcut icon" type="image/x-icon" href="./image/favicon.ico"/>
-    <link rel="stylesheet" type="text/css" href="./css/reset.css"/>
-    <link rel="stylesheet" type="text/css" href="./css/index.css"/>
-  </head>
-  <body>
-    <div id="container">
-      <header>
-        <h1>Welcome to Physics with Desmos</h1>
-        <section id="intro">
-          <p>Project - High school physics with Desmos</p>
-          <p>Author - LeeFlower</p>
-          <p>Email - <a href="mailto:fengtang1222@foxmail.com">here</a></p>
-        </section>
-      </header>
+  <script type="text/javascript" src="./js/index.js"></script>
+  <link rel="shortcut icon" type="image/x-icon" href="./image/favicon.ico" />
+  <link rel="stylesheet" type="text/css" href="./css/reset.css" />
+  <link rel="stylesheet" type="text/css" href="./css/index.css" />
+</head>
+
+<body>
+  <div id="container">
+    <header>
+      <h1>Physics with Desmos</h1>
+      <section id="search-bar">
+        <input type="text" id="search"/>
+        <input type="button" id="confirm-search" value="Confirm"/>
+      </section>
+    </header>
+    <div id="content">
       <aside>
-        <h2>Examples</h2>
+        <div id="aside-header">
+          <h2>Examples</h2>
+        </div>
         <nav>
+          <div class="category">
           <h3>Mecanincs</h3>
-          <ul id="mechanics">
-            <li>
-              <a href="./categories/mechanics/gravity.html">Gravity</a>
-            </li>
-            <li>
-              <a href="./categories/mechanics/elasticity.html">Elasticity</a>
-            </li>
-            <li>
-              <a href="./categories/mechanics/friction.html">Friction</a>
-            </li>
-            <li>
-              <a href="./categories/mechanics/newton_third_law.html">Newton's Third Law</a>
-            </li>
-            <li>
-              <a href="./categories/mechanics/force.html">Compositon and Decomposition of Forces</a>
-            </li>
-            <li>
-              <a href="./categories/mechanics/force2.html">Equilibrium of Concurrent Forces</a>
-            </li>
-            <li>
-              <a href="./categories/mechanics/newton_first_law.html">Newton's First Law</a>
-            </li>
-            <li>
-              <a href="./categories/mechanics/newton_second_law.html">Newton's Second Law</a>
-            </li>
-          </ul>
+            <ul id="mechanics">
+              <li>
+                <a href="./categories/mechanics/gravity.html">Gravity</a>
+              </li>
+              <li>
+                <a href="./categories/mechanics/elasticity.html">Elasticity</a>
+              </li>
+              <li>
+                <a href="./categories/mechanics/friction.html">Friction</a>
+              </li>
+              <li>
+                <a href="./categories/mechanics/newton_third_law.html"><abbr title="Newton's Third Law">NTL</abbr></a>
+              </li>
+              <li>
+                <a href="./categories/mechanics/force.html"><abbr title="Compositon and Decomposition of Forces">CDF</abbr></a>
+              </li>
+              <li>
+                <a href="./categories/mechanics/force2.html"><abbr title="Equilibrium of Concurrent Forces">ECF</abbr></a>
+              </li>
+              <li>
+                <a href="./categories/mechanics/newton_first_law.html"><abbr title="Newton's First Law">NFL</abbr></a>
+              </li>
+              <li>
+                <a href="./categories/mechanics/newton_second_law.html"><abbr title="Newton's Second Law">NSL</abbr></a>
+              </li>
+            </ul>
+          </div>
+          <div class="category">
           <h3>Thermology</h3>
-          <ul id="thermology"></ul>
-          <h3>Photology</h3>
-          <ul id="photology"></ul>
-          <h3>Electromagnetics</h3>
-          <ul id="electromagnetics"></ul>
-          <h3>Atomic Physics</h3>
-          <ul id="atomic-physics"></ul>
+            <ul id="thermology">
+              <li>
+                <a href="#">Noting at all</a>
+              </li>
+            </ul>
+          </div>
+          <div class="category">
+            <h3>Photology</h3>
+            <ul id="photology">
+              <li>
+                <a href="#">Noting at all</a>
+              </li>
+            </ul>
+          </div>
+          <div class="category">
+            <h3>Electromagnetics</h3>
+            <ul id="electromagnetics">
+              <li>
+                <a href="#">Noting at all</a>
+              </li>
+            </ul>
+          </div>
+          <div class="category">
+            <h3>Atomic Physics</h3>
+            <ul id="atomic-physics">
+              <li>
+                <a href="#">Noting at all</a>
+              </li>
+            </ul>
+          </div>
         </nav>
       </aside>
       <main>
-        <div id="content"></div>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque similique, nemo maxime, dolorum aliquam eaque ipsum optio, et impedit ipsa odio tempore officia illum debitis quod nisi dicta autem? Minus!</p>
       </main>
-      <footer>
-        <p>Powered by Desmos</p>
-      </footer>
     </div>
-  </body>
+    <footer>
+      <p>Powered by Desmos</p>
+    </footer>
+  </div>
+</body>
+
 </html>
